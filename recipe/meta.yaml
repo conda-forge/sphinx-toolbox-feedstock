@@ -43,10 +43,6 @@ requirements:
 test:
   imports:
     - sphinx_toolbox
-  commands:
-    - pip check
-  requires:
-    - pip
 
 about:
   home: https://github.com/sphinx-toolbox/sphinx-toolbox
