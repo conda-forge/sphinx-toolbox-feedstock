@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sphinx_toolbox-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sphinx_toolbox-{{ version }}.tar.gz
   sha256: a4b39a6ea24fc8f10e24f052199bda17837a0bf4c54163a56f521552395f5e1a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - whey >=0.0.20
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - apeye >=0.4.0
     - autodocsumm >=0.2.0
     - beautifulsoup4 >=4.9.1
@@ -41,6 +41,8 @@ requirements:
     - typing_inspect >=0.6.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - sphinx_toolbox
 
