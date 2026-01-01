@@ -1,5 +1,5 @@
 {% set name = "sphinx-toolbox" %}
-{% set version = "4.1.0" %}
+{% set version = "4.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sphinx_toolbox-{{ version }}.tar.gz
-  sha256: 5da890f4bb0cacea4f1cf6cef182c5be480340d0ead43c905f51f7e5aacfc19c
+  sha256: 1bb1750bf9e1f72a54161b0867caf3b6bf2ee216ecb9f8c519f0a9348824954a
 
 build:
   noarch: python
